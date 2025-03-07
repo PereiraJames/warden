@@ -1,4 +1,10 @@
 import nmap
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+network_range = os.getenv("NETWORK_IP")
 
 def warden_scan(network_range):
     nm = nmap.PortScanner()
